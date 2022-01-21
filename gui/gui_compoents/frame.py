@@ -1,6 +1,6 @@
 import wx
 import os
-from gui.gui_compoents.panels import ButtonPanel, ChartPanel
+from gui_compoents.panels import ButtonPanel, ChartPanel
 
 
 class MainFrame(wx.Frame):

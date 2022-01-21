@@ -1,4 +1,4 @@
-from gui.gui_compoents.app import MainApp
+from gui_compoents.app import MainApp
 
 
 def main():

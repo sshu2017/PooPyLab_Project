@@ -1,5 +1,5 @@
 import wx
-from gui.gui_compoents.buttons import ReactorButton, PipeButton
+from gui_compoents.buttons import ReactorButton, PipeButton
 
 
 class ButtonPanel(wx.Panel):
