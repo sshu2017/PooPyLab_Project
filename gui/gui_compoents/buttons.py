@@ -9,15 +9,19 @@ class BasicButton(wx.Button):
     def get_chart_panel(self):
         return self.GetParent().GetParent().GetParent().chart_panel
 
+    def get_guiwwtp(self):
+        return self.GetParent().GetParent().GetParent()._guiwwtp
+
 
 class PipeButton(BasicButton):
-    def __init__(self, parent, id, label, pos):
-        super().__init__(parent, id, label, pos=pos)
+    def __init__(self, parent, _id, _label, _pos):
+        super().__init__(parent, _id, _label, _pos)
         self.SetLabel("Pipe")
         self.Bind(wx.EVT_BUTTON, self.on_button_click)
 
     def on_button_click(self, e):
         self.draw_pipe()
+        self.add_one_pipe()
 
     def draw_pipe(self):
         print("Drew a pipe.")
@@ -28,6 +32,10 @@ class PipeButton(BasicButton):
                               size=wx.Size(150, 3))
         hline.SetBackgroundColour('red')
 
+    def add_one_pipe(self):
+
+        print("add_pipe_to_sgraph() is called.")
+        print(f"wwtp = {self.get_guiwwtp()}")
 
 class ReactorButton(BasicButton):
     def __init__(self, parent, id, label, pos):
