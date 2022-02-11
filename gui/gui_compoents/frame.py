@@ -7,7 +7,7 @@ class MainFrame(wx.Frame):
     def __init__(self, parent, id, title):
         wx.Frame.__init__(self, parent, id, title, size=(500, 500))
 
-        self._guiwwtp = {"a": 1}
+        self._guiwwtp = {"a": 1}  # for dev purpose
         print(os.getcwd())
         icon = wx.IconLocation('data/icon.png')
         self.SetIcon(wx.Icon(icon))

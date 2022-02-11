@@ -1,4 +1,5 @@
 import wx
+from PooPyLab.unit_procs.streams import pipe
 
 
 class BasicButton(wx.Button):
@@ -33,9 +34,13 @@ class PipeButton(BasicButton):
         hline.SetBackgroundColour('red')
 
     def add_one_pipe(self):
-
         print("add_pipe_to_sgraph() is called.")
         print(f"wwtp = {self.get_guiwwtp()}")
+        k = 'pipe'
+        v = pipe()
+        self.get_guiwwtp()[k] = v
+        print(f"wwtp = {self.get_guiwwtp()}")
+
 
 class ReactorButton(BasicButton):
     def __init__(self, parent, id, label, pos):
